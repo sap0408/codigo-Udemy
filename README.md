@@ -91,6 +91,27 @@ title="Paises con mas dias festivos al año en cuatro regiones del mundo")+
 theme(panel.background=element_blank(),panel.grid.major=element_blank(),
 panel.grid.minor=element_blank())
 
+#visualizacion de posibles correlaciones con pairs
+pairs(Festivos[,3:7])
+
+#correlación de variables en estos paises
+cor(Festivos[,3:7])
+
+#Una matriz de scatter plot con paquete car
+install.packages("car")
+scatterplotMatrix(~ Dias.Festivos.año+Pib.per.cápita + X..Desempleo, data=Festivos)
+
+#Diferencia del pib per cápita de cada país frente al promedio
+Festivos$Diff <- Festivos$Pib.per.cápita - mean(Festivos$Pib.per.cápita)
+print(Festivos)
+
+#Resúmen de estadisticas claves del dataset Festivos
+summary(Festivos)
+
+
+
+
+
 
 
 
