@@ -67,6 +67,16 @@ View(Festivos)
 #Plot de dataset Dias festivos relacionando pib percapita en cada región
 plot(Festivos$Pib.per.cápita ~ Festivos$Región, xlab="Región", ylab="Pib per cápita", main="Pib per cápita en paises con más dias festivos en cuatro regiones")
 
+#Ahora el plot con ggplot
+grafica <- ggplot(Festivos, aes(x=Región, y=puntaje.competitividad, fill=Región))+geom_boxplot()+
+labs(x="Regiones", y="Puntaje Competitividad", title="Competitividad en paises con más festivos por Región")+
+theme(legend.position = "none");grafica +
+theme(panel.background = element_blank(),panel.grid.major=element_blank(),
+panel.grid.minor=element.blank())
+
+
+
+
 
 
 
