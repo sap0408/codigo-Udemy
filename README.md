@@ -83,7 +83,9 @@ ggplot(Festivos, aes(Dias.Festivos.año,Pib.per.cápita))+geom_point(aes(color=f
 xlab("Dias festivos") + ylab("Pib per cápita")+
 ggtitle ("Relación dias festivos - Pib per cápita en paises con más dias festivos en cuatro regiones")
 
-
+#Histograma
+ggplot()+geom_histogram(data=Festivos, aes(X=Dias.Festivos.año),
+fill
 
 
 
