@@ -23,6 +23,15 @@ labs(y="Cantidad personas", x="Peso en kg",
 title="Peso de las personas")+
 theme(panel.background=element_blank(), panel.grid.major=element_blank(),panel.grid.minor=element_blank())
 
+#Para visualizar correlaciones
+pairs(Descripcion.personas[,3:5])
+
+#Para filtrar o hacer subsetting
+mujeres <- subset(Descripcion.personas, Genero == 'F',)
+
+
+
+
 
 
 
