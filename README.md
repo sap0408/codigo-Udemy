@@ -74,6 +74,15 @@ theme(legend.position = "none");grafica +
 theme(panel.background = element_blank(),panel.grid.major=element_blank(),
 panel.grid.minor=element.blank())
 
+#plot de pib per cápita relacionado con cantidad de dias festivos al año
+plot(Festivos$Pib.per.cápita ~ Festivos$Dias.Festivos.año, xlab="Dias Festivos", ylab="Pib Per cápita",
+main="Relación Dias Festivos - Pib Per cápita en países con más días festivos en cuatro regiones")
+
+#El mismo plot (scatter plot) pero ahora con ggplot y con colores en los puntos según la región
+ggplot(Festivos, aes(Dias.Festivos.año,Pib.per.cápita))+geom_point(aes(color=factor(Región)))+
+xlab("Dias festivos") + ylab("Pib per cápita")+
+ggtitle ("Relación dias festivos - Pib per cápita en paises con más dias festivos en cuatro regiones")
+
 
 
 
