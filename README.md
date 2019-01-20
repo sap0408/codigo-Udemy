@@ -17,6 +17,14 @@ plot(Descripcionpersonas$Estatura~Descripcionpersonas$Genero, xlab="Genero", yla
 #Para ver un plot de peso y estatura
 plot(Descripcionpersonas$Peso.Kg.~Descripcionpersonas$Estatura, xlab="Estatura", ylab="Peso", main="Relación estatura y peso")
 
+#histograma
+ggplot()+geom_histogram(data=Descripcionpersonas, aes(x=Peso.Kg.), fill="blue", color="red", binwidth=3)+
+labs(y="Cantidad personas", x="Peso en kg",
+title="Peso de las personas")+
+theme(panel.background=element_blank(), panel.grid.major=element_blank(),panel.grid.minor=element_blank())
+
+
+
 
 
 
