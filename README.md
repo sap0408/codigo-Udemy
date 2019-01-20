@@ -64,6 +64,9 @@ cor(Descripcion.personas[,3:5])
 Festivos <- read.csv("~/Desktop/Festivos.csv")
 View(Festivos)
 
+#Plot de dataset Dias festivos relacionando pib percapita en cada región
+plot(Festivos$Pib.per.cápita ~ Festivos$Región, xlab="Región", ylab="Pib per cápita", main="Pib per cápita en paises con más dias festivos en cuatro regiones")
+
 
 
 
