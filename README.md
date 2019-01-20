@@ -57,6 +57,13 @@ sd(Descripcion.personas$Peso.Kg.)
 coeficiente <- sd(Descripcion.personas$Peso.Kg.)/mean(Descripcion.personas$Peso.Kg.)*100
 print(coeficiente)
 
+#Ver correlación del dataset en unas variables
+cor(Descripcion.personas[,3:5])
+
+#Clase 15 con dataset dias festivos
+Festivos <- read.csv("~/Desktop/Festivos.csv")
+View(Festivos)
+
 
 
 
