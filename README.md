@@ -29,6 +29,16 @@ pairs(Descripcion.personas[,3:5])
 #Para filtrar o hacer subsetting
 mujeres <- subset(Descripcion.personas, Genero == 'F',)
 
+#Ahora ver esa selección de solo mujeres
+mujeres
+
+#Y hacer pairs de solo mujeres
+pairs(mujeres[,3:5])
+
+
+
+
+
 
 
 
