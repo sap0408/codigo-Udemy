@@ -85,7 +85,13 @@ ggtitle ("Relación dias festivos - Pib per cápita en paises con más dias fest
 
 #Histograma
 ggplot()+geom_histogram(data=Festivos, aes(X=Dias.Festivos.año),
-fill
+fill="blue", color="red", binwidth=1)+
+labs(y="Conteo paises", x="Dias festivos al año",
+title="Paises con mas dias festivos al año en cuatro regiones del mundo")+
+theme(panel.background=element_blank(),panel.grid.major=element_blank(),
+panel.grid.minor=element_blank())
+
+
 
 
 
