@@ -35,6 +35,30 @@ mujeres
 #Y hacer pairs de solo mujeres
 pairs(mujeres[,3:5])
 
+#CLASE 9
+#Para promedios
+mean(Descripcion.personas$Peso.Kg.)
+
+#Es lo mismo que escribir:
+mean(Descripcion.personas[,3])
+
+#Pedir a R las estadisticas descriptivas del dataset (mediana, cuartiles, promedio)
+summary(Descripcion.personas)
+
+#Ver la diferencia de cada dato frente al promedio en una variable. En este caso, la diferencia de cada persona frente al
+#promedio del peso del grupo
+Descripcion.personas$Diff <- Descripcion.personas$Peso.Kg. - mean(Descripcion.personas$Peso.Kg)
+print(Descripcion.personas)
+
+#Desviacion estandar del peso de las personas. Es decir, la variacion del peso de cada persona frente al promedio de peso del grupo.
+sd(Descripcion.personas$Peso.Kg.)
+
+#Coeficiente de variación: si supera 25% los datos estan desviados del promedio. Si no, los datos son homogéneos.
+coeficiente <- sd(Descripcion.personas$Peso.Kg.)/mean(Descripcion.personas$Peso.Kg.)*100
+print(coeficiente)
+
+
+
 
 
 
